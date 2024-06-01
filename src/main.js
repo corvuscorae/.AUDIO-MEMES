@@ -20,9 +20,8 @@ let config = {
             }
         }
     },
-    width: 960,
-    height: 960,
-    //backgroundColor: '1c1211',
+    width: 800,
+    height: 800,
     scene: [Load, NoFade, Fade, Spatial]
 }
 

@@ -9,14 +9,6 @@ class Fade extends Phaser.Scene {
         console.log("Fade");
 
         this.endScene = false;
-
-        // variables and settings
-        this.ACCELERATION = 500;
-        this.DRAG = 6000;    // DRAG < ACCELERATION = icy slide
-        this.GRAVITY = 2000;
-        this.physics.world.gravity.y = this.GRAVITY;
-        this.JUMP_VELOCITY = -600;
-        this.SCALE = 2.0;
         
         // set up Phaser-provided cursor key input
         cursors = this.input.keyboard.createCursorKeys();
@@ -40,6 +32,7 @@ class Fade extends Phaser.Scene {
         this.physics.world.setBounds(0,0,this.map.widthInPixels*2,this.map.heightInPixels*2);    
 
         this.layer = this.map.createLayer("Platforms", this.tileSets, 0, 0);
+        this.layer.setScale(0.75);
         
         document.getElementById('description').innerHTML = 
         "<h2>Fade.js<br> > press ENTER to restart scene<br> > press SPACE to start next scene</h2>";
